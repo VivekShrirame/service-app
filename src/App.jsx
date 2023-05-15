@@ -1,11 +1,14 @@
-import Home from "./Home";
 import About from "./About";
-import Services from "./Services";
 import Contact from "./Contact";
+import Home from "./Home";
+import Services from "./Services";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./GlobalStyle";
+// import Error from "./Error";
+// import GoToTop from "./components/GoToTop";
 
 const App = () => {
   const theme = {
@@ -30,6 +33,7 @@ const App = () => {
   };
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <BrowserRouter>
         <Header />
         <Routes>
@@ -37,6 +41,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          {/* <Route path="*" element={<Error />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
