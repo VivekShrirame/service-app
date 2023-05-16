@@ -11,11 +11,12 @@ const HeroSection = () => {
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
-          <p className="hero-top-heading">THIS IS ME</p>
+          <p className="hero-top-heading">THIS IS</p>
           <h1 className="hero-heading">{name} </h1>
           <p className="hero-para">
             A FrontEnd Developer and Freelancer. I work with technologies like
-            Next.js, NodeJS, ExpressJS, TailwindCSS, Bootstrap
+            Next.js, NodeJS, ExpressJS, TailwindCSS, Bootstrap. I also provide
+            services like SEO Friendly and Responsive Web Development.
           </p>
           <Button className="btn hireme-btn">
             <NavLink to="/contact">Hire me</NavLink>

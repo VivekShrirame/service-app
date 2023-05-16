@@ -7,8 +7,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-// import Error from "./Error";
-// import GoToTop from "./components/GoToTop";
+import Error from "./Error";
+import GoToTop from "./components/GoToTop";
 
 const App = () => {
   const theme = {
@@ -31,18 +31,21 @@ const App = () => {
     },
     media: { mobile: "768px", tab: "998px" },
   };
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <GoToTop />
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/service" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="*" element={<Error />} /> */}
+          <Route path="*" element={<Error />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </ThemeProvider>

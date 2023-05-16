@@ -1,11 +1,11 @@
-import { useGlobalContext } from "./Context";
+import React, { useEffect } from "react";
 import HeroSection from "./components/HeroSection";
-import { useEffect } from "react";
+import { useGlobalContext } from "./Context";
 
 const About = () => {
-  const { updateAboutPage } = useGlobalContext();
+  const { udpateAboutPage } = useGlobalContext();
 
-  useEffect(() => updateAboutPage(), []);
+  useEffect(() => udpateAboutPage(), []);
 
   return <HeroSection />;
 };
